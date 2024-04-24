@@ -16,9 +16,9 @@ def ssplit(str):
     except:
         return str
 def tapply(df,func):
-    def try_func(a):
+    def try_func(a,**kwargs):
         try:
-            return func(a)
+            return func(a,**kwargs)
         except:
             return a
     return df.apply(try_func)
